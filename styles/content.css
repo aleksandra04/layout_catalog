@@ -1,47 +1,55 @@
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 11px; }
+
+body {
+  margin: 0; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
 .container {
-  max-width: 945px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 0 40px 50px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  -webkit-column-gap: 48px;
+     -moz-column-gap: 48px;
+          column-gap: 48px;
+  row-gap: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto; }
 
 .card {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 200px;
   height: 403px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  padding: 30px 15px 14px;
-  font-family: "Roboto", sans-serif;
-  margin-bottom: 50px; }
+  padding: 14px; }
 
 .img {
   height: 134px;
   width: 160px;
-  margin: 0 5px; }
+  margin: 16px 5px 42px; }
 
 .desc {
   display: inline-block;
-  margin: 41px 0 0;
   line-height: 15px;
   font-size: 12px;
   font-weight: 500; }
 
 .code {
-  font-size: 11px;
-  font-weight: 400;
-  margin: 6px 0 0;
-  display: inline-block;
-  line-height: 13px; }
+  display: block;
+  height: 13px;
+  margin: 5px 0 0; }
 
-.feedback {
+.rating {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,25 +59,28 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 15px;
-  font-size: 11px;
-  font-weight: 400; }
-  .feedback__star {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 91px; }
-    .feedback__star-img {
-      background-image: url(../images/star-active.svg);
-      background-repeat: no-repeat;
-      height: 15px;
-      width: 15px;
-      margin: 0; }
-      .feedback__star-imggray {
-        background-image: url(../images/star.svg); }
+  margin-top: 15px; }
+
+.stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .stars__img {
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+    height: 15px;
+    width: 15px;
+    padding-right: 4px; }
+  .stars-1 div:nth-child(1) ~ div {
+    background-image: url(../images/star.svg); }
+  .stars-2 div:nth-child(2) ~ div {
+    background-image: url(../images/star.svg); }
+  .stars-3 div:nth-child(3) ~ div {
+    background-image: url(../images/star.svg); }
+  .stars-4 div:nth-child(4) ~ div {
+    background-image: url(../images/star.svg); }
+  .stars-5 div:nth-child(5) ~ div {
+    background-image: url(../images/star.svg); }
 
 .price {
   display: -webkit-box;
@@ -82,41 +93,27 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .price__name {
-    font-size: 11px;
-    font-weight: 400; }
   .price__sum {
     font-size: 16px;
     font-weight: bold; }
 
-.buy {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 20px 0 15px; }
-  .buy__link {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    display: inline-block;
-    text-decoration: none;
+.link {
+  display: block;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  margin-top: 20px; }
+  .link__text {
     color: white;
     font-weight: bold;
     font-size: 14px;
-    height: 40px;
-    width: 100%;
-    background-color: #00acdc;
-    border-radius: 5px;
-    line-height: 40px;
-    text-align: center; }
-    .buy__link:hover {
-      color: #00acdc;
-      background-color: #fff;
-      border: 1px solid #00acdc;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      border-radius: 5px; }
+    text-align: center;
+    line-height: 40px; }
+  .link:hover {
+    color: #00acdc;
+    background-color: #fff; }
 
 /*# sourceMappingURL=content.css.map */
